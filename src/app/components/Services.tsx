@@ -65,7 +65,7 @@ export function Services() {
 
         <div className="mt-12 text-center">
           <a
-            href="https://wa.me/524921234567"
+            href="https://wa.me/523343591191"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#C87960] text-white px-8 py-4 rounded-lg hover:bg-[#B56850] transition-colors"

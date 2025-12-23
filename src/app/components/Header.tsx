@@ -23,7 +23,7 @@ export function Header() {
               <img src={logo} alt="Casanova Architektur Logo" className="w-full h-full object-contain" />
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-gray-900">Casanova Architektur</h1>
+              <h1 className="text-lg font-semibold text-[#C87960]">Casanova Arquitectos</h1>
               <p className="text-xs text-gray-600">Arquitectura Accesible en Zacatecas</p>
             </div>
           </div>
@@ -49,7 +49,7 @@ export function Header() {
               Proceso
             </button>
             <a
-              href="https://wa.me/524921234567"
+              href="https://wa.me/523343591191"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#C87960] text-white px-6 py-2 rounded-lg hover:bg-[#B56850] transition-colors"
@@ -89,7 +89,7 @@ export function Header() {
               Proceso
             </button>
             <a
-              href="https://wa.me/524921234567"
+              href="https://wa.me/523343591191"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#C87960] text-white px-6 py-3 rounded-lg hover:bg-[#B56850] transition-colors text-center"

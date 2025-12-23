@@ -74,8 +74,8 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-2">
                 <MessageCircle size={16} className="mt-1 flex-shrink-0" />
-                <a href="https://wa.me/524921234567" target="_blank" rel="noopener noreferrer" className="hover:text-[#C87960] transition-colors">
-                  +52 492 123 4567
+                <a href="https://wa.me/523343591191" target="_blank" rel="noopener noreferrer" className="hover:text-[#C87960] transition-colors">
+                  +52 33 4359 1191
                 </a>
               </li>
               <li className="flex items-start gap-2">

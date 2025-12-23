@@ -12,7 +12,7 @@ const packages = [
     price: 'Desde $___ MXN / m²',
     priceNote: '(Precio final según alcance del proyecto)',
     ctaText: 'Solicitar cotización',
-    ctaLink: 'https://wa.me/524921234567?text=Hola,%20me%20interesa%20el%20Diseño%20Básico%20de%20Vivienda',
+    ctaLink: 'https://wa.me/523343591191?text=Hola,%20me%20interesa%20el%20Diseño%20Básico%20de%20Vivienda',
   },
   {
     icon: ClipboardList,
@@ -26,7 +26,7 @@ const packages = [
     price: 'Desde $___ MXN / m²',
     priceNote: '',
     ctaText: 'Cotizar por WhatsApp',
-    ctaLink: 'https://wa.me/524921234567?text=Hola,%20necesito%20una%20cotización%20para%20Diseño%20Completo',
+    ctaLink: 'https://wa.me/523343591191?text=Hola,%20necesito%20una%20cotización%20para%20Diseño%20Completo',
   },
   {
     icon: Wrench,
@@ -40,7 +40,7 @@ const packages = [
     price: 'Cotización personalizada',
     priceNote: '(Después de revisión del espacio)',
     ctaText: 'Agendar asesoría',
-    ctaLink: 'https://wa.me/524921234567?text=Hola,%20quiero%20agendar%20una%20asesoría%20para%20remodelación',
+    ctaLink: 'https://wa.me/523343591191?text=Hola,%20quiero%20agendar%20una%20asesoría%20para%20remodelación',
   },
   {
     icon: Building,
@@ -53,7 +53,7 @@ const packages = [
     price: 'Cotización personalizada',
     priceNote: '',
     ctaText: 'Hablar con el arquitecto',
-    ctaLink: 'https://wa.me/524921234567?text=Hola,%20tengo%20un%20proyecto%20comercial%20y%20necesito%20información',
+    ctaLink: 'https://wa.me/523343591191?text=Hola,%20tengo%20un%20proyecto%20comercial%20y%20necesito%20información',
   },
 ];
 

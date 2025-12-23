@@ -49,7 +49,7 @@ export function Process() {
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-12 left-[60%] w-[80%] h-[2px] bg-gray-200 z-0" />
                 )}
-                
+
                 <div className="relative z-10">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-16 h-16 bg-[#C87960] rounded-xl flex items-center justify-center flex-shrink-0">
@@ -79,7 +79,7 @@ export function Process() {
             La primera consulta es gratuita. Platiquemos sobre lo que tienes en mente y te daré una orientación profesional sin compromiso.
           </p>
           <a
-            href="https://wa.me/524921234567"
+            href="https://wa.me/523343591191"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-lg hover:bg-[#20BD5A] transition-colors"
