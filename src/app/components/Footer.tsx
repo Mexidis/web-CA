@@ -41,38 +41,38 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <li>
-                  <button
-                    onClick={() => handleScroll('inicio')}
-                    className="hover:text-[#C87960] transition-colors"
-                  >
-                    Inicio
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => handleScroll('servicios')}
-                    className="hover:text-[#C87960] transition-colors"
-                  >
-                    Servicios
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => handleScroll('portafolio')}
-                    className="hover:text-[#C87960] transition-colors"
-                  >
-                    Portafolio
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => handleScroll('proceso')}
-                    className="hover:text-[#C87960] transition-colors"
-                  >
-                    Proceso
-                  </button>
-                </li>
+                <li></li>
+                <button
+                  onClick={() => handleScroll('inicio')}
+                  className="hover:text-[#C87960] transition-colors"
+                >
+                  Inicio
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleScroll('servicios')}
+                  className="hover:text-[#C87960] transition-colors"
+                >
+                  Servicios
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleScroll('portafolio')}
+                  className="hover:text-[#C87960] transition-colors"
+                >
+                  Portafolio
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleScroll('proceso')}
+                  className="hover:text-[#C87960] transition-colors"
+                >
+                  Proceso
+                </button>
+              </li>
             </ul>
           </div>
 
