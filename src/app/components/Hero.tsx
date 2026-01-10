@@ -34,7 +34,7 @@ export function Hero() {
             </div>
             <div className="mt-8 grid grid-cols-3 gap-4 text-center">
               <div>
-                <div className="text-3xl text-[#C87960] mb-1">+Diversidad</div>
+                <div className="text-3xl text-[#C87960] mb-1">Variedad</div>
                 <div className="text-sm text-gray-600">Proyectos</div>
               </div>
               <div>

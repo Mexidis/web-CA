@@ -5,6 +5,8 @@ import casa03 from '../images/casa_centro/casa_03.jpg';
 import casa04 from '../images/casa_centro/casa_04.jpg';
 import casa05 from '../images/casa_centro/casa_05.jpg';
 import casa06 from '../images/casa_centro/casa_06.jpg';
+import casa07 from '../images/casa_centro/casa_lisa.jpg';
+import casa08 from '../images/casa_centro/fachada_lisa.jpg';
 
 // Chimenea
 import chimenea from '../images/chimenea/chimenea.jpg';
@@ -61,17 +63,18 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: 1,
-        slug: 'casa-habitacion-zacatecas',
-        title: 'Casa Habitación en Zacatecas',
+        slug: 'departamento-zacatecas',
+        title: 'Departamento en Zacatecas',
         category: 'Vivienda',
         location: 'Centro, Zacatecas',
         year: '2015',
-        description: 'Diseño de casa de 90m² con 2 recámaras, aprovechamiento óptimo del terreno.',
+        description: 'Diseño de departamento de 120m² con 2 recámaras, aprovechamiento óptimo del terreno.',
         challenge: 'El cliente necesitaba una vivienda funcional en un terreno de dimensiones reducidas (6x15m), buscando maximizar la iluminación natural y la sensación de amplitud con un presupuesto ajustado.',
         solution: 'Propusimos un diseño de planta abierta en el área social para integrar sala, comedor y cocina. Utilizamos cubos de luz estratégicos y ventanas altas para garantizar privacidad y luz. Se optó por materiales locales y aparentes para reducir costos de mantenimiento.',
         result: 'Una casa moderna y acogedora que se siente mucho más grande de lo que es. Los espacios fluyen naturalmente y la iluminación natural reduce el consumo eléctrico. El cliente obtuvo una vivienda digna y funcional dentro de su presupuesto.',
-        coverImage: disenioCasa,
+        coverImage: casa07,
         gallery: [
+            casa08,
             casa01,
             casa02,
             casa03,
@@ -109,9 +112,9 @@ export const projects: Project[] = [
         location: 'Fresnillo, Zacatecas',
         year: '2020',
         description: 'Diseño de cafeteria de 185m² con área de exhibición y bodega.',
-        challenge: 'Adaptar un local antiguo en el centro histórico para una cafeteria moderna, respetando la normativa del INAH y aprovechando al máximo los 185m² disponibles.',
-        solution: 'Diseñamos mobiliario a medida que aprovecha la altura del local para exhibición y almacenamiento. Restauramos los muros de cantera originales para dar carácter y contrastamos con iluminación LED moderna y perfilería metálica negra.',
-        result: 'Una cafeteria con identidad única que atrae a turistas y locales. El diseño respeta el patrimonio histórico mientras ofrece una experiencia de compra contemporánea y fluida.',
+        challenge: 'El cliente quería una cafeteria moderna con un diseño que se integrara esteticamente con el campus de la UAZ en Fresnillo.',
+        solution: 'Propusimos un diseño de planta abierta en el área social para integrar sala, comedor y cocina. Utilizamos cubos de luz estratégicos y ventanas altas para garantizar privacidad y luz. Se optó por materiales locales y aparentes para reducir costos de mantenimiento.',
+        result: 'Una cafeteria moderna con un diseño que se integra esteticamente con el campus de la UAZ en Fresnillo.',
         coverImage: cafeteria1,
         gallery: [
             cafeteria2,

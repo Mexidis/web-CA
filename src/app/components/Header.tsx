@@ -26,7 +26,10 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <button
+            onClick={() => scrollToSection('inicio')}
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity text-left"
+          >
             <div className="w-10 h-10 flex items-center justify-center">
               <img src={logo} alt="Casanova Architektur Logo" className="w-full h-full object-contain" />
             </div>
@@ -34,7 +37,7 @@ export function Header() {
               <h1 className="text-lg font-semibold text-[#C87960]">Casanova Arquitectos</h1>
               <p className="text-xs text-gray-600">Arquitectura Accesible en Zacatecas</p>
             </div>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">

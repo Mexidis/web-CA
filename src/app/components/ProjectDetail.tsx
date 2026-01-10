@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, MapPin, CheckCircle } from 'lucide-react';
+import { ArrowLeft, MapPin, CheckCircle, X } from 'lucide-react';
 import { projects } from '../../data/projects';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { WhatsAppIcon } from './icons/WhatsAppIcon';
@@ -7,6 +8,7 @@ import ScrollToTop from './utils/ScrollToTop';
 
 export function ProjectDetail() {
     const { slug } = useParams<{ slug: string }>();
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const project = projects.find(p => p.slug === slug);
 
     if (!project) {
@@ -130,7 +132,7 @@ export function ProjectDetail() {
                 <h3 className="text-2xl text-gray-900 mb-8">Galería del proyecto</h3>
                 <div className="columns-2 md:columns-4 gap-6 space-y-6 mb-16">
                     {project.gallery.map((img, index) => (
-                        <div key={index} className="break-inside-avoid inline-block w-full rounded-xl overflow-hidden shadow-lg">
+                        <div key={index} className="break-inside-avoid inline-block w-full rounded-xl overflow-hidden shadow-lg cursor-pointer" onClick={() => setSelectedImage(img)}>
                             <ImageWithFallback
                                 src={img}
                                 alt={`${project.title} - vista ${index + 1}`}
@@ -139,6 +141,24 @@ export function ProjectDetail() {
                         </div>
                     ))}
                 </div>
+
+                {/* Lightbox Modal */}
+                {selectedImage && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4" onClick={() => setSelectedImage(null)}>
+                        <button
+                            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+                            onClick={() => setSelectedImage(null)}
+                        >
+                            <X size={40} />
+                        </button>
+                        <img
+                            src={selectedImage}
+                            alt="Vista ampliada"
+                            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                    </div>
+                )}
 
                 {/* Navigation Footer */}
                 <div className="border-t border-gray-200 pt-12 flex justify-between items-center">

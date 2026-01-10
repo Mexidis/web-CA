@@ -41,7 +41,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <li></li>
+
                 <button
                   onClick={() => handleScroll('inicio')}
                   className="hover:text-[#C87960] transition-colors"
