@@ -13,7 +13,7 @@ const services = [
   },
   {
     icon: Store,
-    title: 'Proyectos comerciales pequeños',
+    title: 'Proyectos comerciales',
     description: 'Locales comerciales, consultorios, talleres. Diseños prácticos que ayudan a tu negocio a crecer.',
   },
   {

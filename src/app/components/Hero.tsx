@@ -1,5 +1,7 @@
-import { MessageCircle } from 'lucide-react';
+
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import heroImage from '../../images/portada/tres_partes.png';
 
 export function Hero() {
   return (
@@ -20,7 +22,7 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-lg hover:bg-[#20BD5A] transition-colors"
               >
-                <MessageCircle size={24} />
+                <WhatsAppIcon size={24} />
                 Cotiza por WhatsApp
               </a>
               <button
@@ -32,11 +34,11 @@ export function Hero() {
             </div>
             <div className="mt-8 grid grid-cols-3 gap-4 text-center">
               <div>
-                <div className="text-3xl text-[#C87960] mb-1">+50</div>
+                <div className="text-3xl text-[#C87960] mb-1">+Diversidad</div>
                 <div className="text-sm text-gray-600">Proyectos</div>
               </div>
               <div>
-                <div className="text-3xl text-[#C87960] mb-1">+5</div>
+                <div className="text-3xl text-[#C87960] mb-1">+15</div>
                 <div className="text-sm text-gray-600">Años de experiencia</div>
               </div>
               <div>
@@ -48,7 +50,7 @@ export function Hero() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1607756844432-f4849943f199?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzaW1wbGUlMjBob3VzZSUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjYzODk1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={heroImage}
                 alt="Arquitectura moderna en Zacatecas"
                 className="w-full h-full object-cover"
               />

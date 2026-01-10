@@ -1,52 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { projects } from '../../data/projects';
 
 const categories = ['Todos', 'Vivienda', 'Comercial', 'Remodelaciones'];
-
-const projects = [
-  {
-    id: 1,
-    title: 'Casa Habitación en Guadalupe',
-    category: 'Vivienda',
-    description: 'Diseño de casa de 90m² con 2 recámaras, aprovechamiento óptimo del terreno.',
-    image: 'https://images.unsplash.com/photo-1607756844432-f4849943f199?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzaW1wbGUlMjBob3VzZSUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjYzODk1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-  },
-  {
-    id: 2,
-    title: 'Remodelación de Sala y Cocina',
-    category: 'Remodelaciones',
-    description: 'Renovación completa con nuevos acabados, optimización de espacios.',
-    image: 'https://images.unsplash.com/photo-1612458930654-8b91aec8cf4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwaG9tZSUyMGludGVyaW9yfGVufDF8fHx8MTc2NjMzODU4Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-  },
-  {
-    id: 3,
-    title: 'Local Comercial en Centro Histórico',
-    category: 'Comercial',
-    description: 'Diseño de tienda de 40m² con área de exhibición y bodega.',
-    image: 'https://images.unsplash.com/photo-1765980161533-3f6c2d56c86d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFsbCUyMGNvbW1lcmNpYWwlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjYzODk1MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-  },
-  {
-    id: 4,
-    title: 'Ampliación de Segunda Planta',
-    category: 'Remodelaciones',
-    description: 'Construcción de segundo piso con 2 recámaras adicionales.',
-    image: 'https://images.unsplash.com/photo-1765277789236-18b14cb7869f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob21lJTIwcmVub3ZhdGlvbiUyMGNvbnN0cnVjdGlvbnxlbnwxfHx8fDE3NjYzNTk2NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-  },
-  {
-    id: 5,
-    title: 'Vivienda Económica en Zacatecas',
-    category: 'Vivienda',
-    description: 'Casa de interés social con diseño funcional y eficiente.',
-    image: 'https://images.unsplash.com/photo-1742415106160-594d07f6cc23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwYmx1ZXByaW50cyUyMHBsYW5zfGVufDF8fHx8MTc2NjMyMzQ0OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-  },
-  {
-    id: 6,
-    title: 'Consultorio Médico',
-    category: 'Comercial',
-    description: 'Diseño interior de consultorio con sala de espera y área de atención.',
-    image: 'https://images.unsplash.com/photo-1612458930654-8b91aec8cf4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwaG9tZSUyMGludGVyaW9yfGVufDF8fHx8MTc2NjMzODU4Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-  },
-];
 
 export function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('Todos');
@@ -72,11 +29,10 @@ export function Portfolio() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full transition-colors ${
-                activeCategory === category
+              className={`px-6 py-2 rounded-full transition-colors ${activeCategory === category
                   ? 'bg-[#C87960] text-white'
                   : 'bg-white text-gray-700 hover:bg-gray-100'
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -85,29 +41,39 @@ export function Portfolio() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {filteredProjects.map(project => (
-            <div
+            <Link
+              to={`/proyecto/${project.slug}`}
               key={project.id}
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:-translate-y-1 block group"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden relative">
                 <ImageWithFallback
-                  src={project.image}
+                  src={project.coverImage}
                   alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-[#C87960] transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  Ver proyecto
+                </div>
               </div>
               <div className="p-6">
-                <div className="text-sm text-[#C87960] mb-2">
-                  {project.category}
+                <div className="flex justify-between items-start mb-2">
+                  <div className="text-sm text-[#C87960]">
+                    {project.category}
+                  </div>
+                  <div className="text-xs text-gray-400">
+                    {project.year}
+                  </div>
                 </div>
-                <h3 className="text-xl text-gray-900 mb-2">
+                <h3 className="text-xl text-gray-900 mb-2 group-hover:text-[#C87960] transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 line-clamp-2">
                   {project.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { MessageCircle, Mail, MapPin, Phone } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 export function Contact() {
   return (
@@ -22,7 +23,7 @@ export function Contact() {
               className="bg-[#25D366] text-white p-6 rounded-xl hover:bg-[#20BD5A] transition-colors flex items-center gap-4"
             >
               <div className="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                <MessageCircle size={28} />
+                <WhatsAppIcon size={28} />
               </div>
               <div>
                 <div className="text-sm opacity-90 mb-1">Envía un mensaje</div>
@@ -88,7 +89,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-lg hover:bg-[#20BD5A] transition-colors"
               >
-                <MessageCircle size={20} />
+                <WhatsAppIcon size={20} />
                 Contactar ahora
               </a>
             </div>

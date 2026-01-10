@@ -8,3 +8,11 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer utilities {
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+}

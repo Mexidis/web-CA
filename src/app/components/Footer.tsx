@@ -1,8 +1,22 @@
 import { MessageCircle, Mail, MapPin } from 'lucide-react';
-import logo from '../../images/casanovaA.png';
+import { useLocation, useNavigate } from 'react-router-dom';
+import logo from "../../images/logo/casanovaA.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleScroll = (id: string) => {
+    if (location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/#' + id);
+    }
+  };
 
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -27,45 +41,38 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <button
-                  onClick={() => document.getElementById('inicio')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="hover:text-[#C87960] transition-colors"
-                >
-                  Inicio
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="hover:text-[#C87960] transition-colors"
-                >
-                  Servicios
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => document.getElementById('portafolio')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="hover:text-[#C87960] transition-colors"
-                >
-                  Portafolio
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => document.getElementById('sobre-mi')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="hover:text-[#C87960] transition-colors"
-                >
-                  Sobre mí
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => document.getElementById('proceso')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="hover:text-[#C87960] transition-colors"
-                >
-                  Proceso
-                </button>
-              </li>
+                <li>
+                  <button
+                    onClick={() => handleScroll('inicio')}
+                    className="hover:text-[#C87960] transition-colors"
+                  >
+                    Inicio
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleScroll('servicios')}
+                    className="hover:text-[#C87960] transition-colors"
+                  >
+                    Servicios
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleScroll('portafolio')}
+                    className="hover:text-[#C87960] transition-colors"
+                  >
+                    Portafolio
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleScroll('proceso')}
+                    className="hover:text-[#C87960] transition-colors"
+                  >
+                    Proceso
+                  </button>
+                </li>
             </ul>
           </div>
 

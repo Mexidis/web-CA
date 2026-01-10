@@ -1,15 +1,23 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-import logo from '../../images/casanovaA.png';
+import logo from "../../images/logo/casanovaA.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setIsMenuOpen(false);
+      }
+    } else {
+      navigate('/#' + id);
       setIsMenuOpen(false);
     }
   };
@@ -42,9 +50,7 @@ export function Header() {
             <button onClick={() => scrollToSection('portafolio')} className="text-gray-700 hover:text-[#C87960] transition-colors">
               Portafolio
             </button>
-            <button onClick={() => scrollToSection('sobre-mi')} className="text-gray-700 hover:text-[#C87960] transition-colors">
-              Sobre mí
-            </button>
+
             <button onClick={() => scrollToSection('proceso')} className="text-gray-700 hover:text-[#C87960] transition-colors">
               Proceso
             </button>
@@ -82,9 +88,7 @@ export function Header() {
             <button onClick={() => scrollToSection('portafolio')} className="text-left text-gray-700 hover:text-[#C87960] transition-colors py-2">
               Portafolio
             </button>
-            <button onClick={() => scrollToSection('sobre-mi')} className="text-left text-gray-700 hover:text-[#C87960] transition-colors py-2">
-              Sobre mí
-            </button>
+
             <button onClick={() => scrollToSection('proceso')} className="text-left text-gray-700 hover:text-[#C87960] transition-colors py-2">
               Proceso
             </button>

@@ -1,4 +1,5 @@
 import { MessageCircle, FileText, CircleCheck, Wrench } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 const steps = [
   {
@@ -84,7 +85,7 @@ export function Process() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-lg hover:bg-[#20BD5A] transition-colors"
           >
-            <MessageCircle size={20} />
+            <WhatsAppIcon size={20} />
             Agendar consulta gratuita
           </a>
         </div>
